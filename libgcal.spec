@@ -2,7 +2,7 @@ Summary:	Library implementing the SSH protocol
 Summary(pl.UTF-8):	Biblioteka implementująca protokół SSH
 Name:		libgcal
 Version:	0.9.6
-Release:	1
+Release:	0.1
 License:	LGPL v2.1
 Group:		Libraries
 Source0:	http://libgcal.googlecode.com/files/%{name}-%{version}.tar.bz2

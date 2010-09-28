@@ -10,15 +10,17 @@ Source0:	http://libgcal.googlecode.com/files/%{name}-%{version}.tar.bz2
 URL:		http://code.google.com/p/libgcal/
 BuildRequires:	check-devel
 BuildRequires:	cmake >= 2.6.0
-BuildRequires:	libxml2-devel
 BuildRequires:	curl-devel
+BuildRequires:	libxml2-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-ANSI C library that does allow communication with google calendar and contacts.
+ANSI C library that does allow communication with google calendar and
+contacts.
 
 %description -l pl.UTF-8
-Biblioteka napisana w ANSI C, umożliwiająca komunikację z usługami Google: kalendarzem oraz kontaktami.
+Biblioteka napisana w ANSI C, umożliwiająca komunikację z usługami
+Google: kalendarzem oraz kontaktami.
 
 %package devel
 Summary:	Header files for libgcal library

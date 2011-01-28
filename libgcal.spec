@@ -12,6 +12,7 @@ BuildRequires:	check-devel
 BuildRequires:	cmake >= 2.6.0
 BuildRequires:	curl-devel
 BuildRequires:	libxml2-devel
+BuildRequires:	pkgconfig
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description

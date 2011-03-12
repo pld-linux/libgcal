@@ -2,7 +2,7 @@ Summary:	A C library to handle Google calendar and contacts
 Summary(pl.UTF-8):	Biblioteka napisana w C obsługująca kalendarz i kontakty Google
 Name:		libgcal
 Version:	0.9.6
-Release:	2
+Release:	3
 License:	BSD
 Group:		Libraries
 Source0:	http://libgcal.googlecode.com/files/%{name}-%{version}.tar.bz2
@@ -71,4 +71,6 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/libgcal.so
 %{_includedir}/libgcal
 %{_pkgconfigdir}/libgcal.pc
+%dir %{_libdir}/LibGCal
+%dir %{_libdir}/LibGCal/cmake
 %{_libdir}/LibGCal/cmake/LibGCalConfig.cmake

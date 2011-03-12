@@ -2,7 +2,7 @@ Summary:	A C library to handle Google calendar and contacts
 Summary(pl.UTF-8):	Biblioteka napisana w C obsługująca kalendarz i kontakty Google
 Name:		libgcal
 Version:	0.9.6
-Release:	1
+Release:	2
 License:	BSD
 Group:		Libraries
 Source0:	http://libgcal.googlecode.com/files/%{name}-%{version}.tar.bz2
@@ -13,6 +13,7 @@ BuildRequires:	cmake >= 2.6.0
 BuildRequires:	curl-devel
 BuildRequires:	libxml2-devel
 BuildRequires:	pkgconfig
+BuildRequires:	rpmbuild(macros) >= 1.600
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -42,11 +43,6 @@ Pliki nagłówkowe biblioteki libgcal.
 install -d build
 cd build
 %cmake \
-	-DCMAKE_BUILD_TYPE="Release" \
-	-DCMAKE_INSTALL_PREFIX=%{_prefix} \
-%if "%{_lib}" == "lib64"
-	-DLIB_SUFFIX=64 \
-%endif
 	..
 
 %{__make}
@@ -67,11 +63,12 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc README
-%attr(755,root,root) %{_libdir}/lib*.so.*.*.*
-%attr(755,root,root) %ghost %{_libdir}/lib*.so.?
+%attr(755,root,root) %{_libdir}/libgcal.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libgcal.so.0
 
 %files devel
 %defattr(644,root,root,755)
 %{_libdir}/libgcal.so
 %{_includedir}/libgcal
 %{_pkgconfigdir}/libgcal.pc
+%{_libdir}/LibGCal/cmake/LibGCalConfig.cmake
